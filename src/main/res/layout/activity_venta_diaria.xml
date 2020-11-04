@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="2041dp"
+        android:layout_height="1059dp"
+        android:foreground="@drawable/fondo"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondd" />
+
+    <ImageButton
+        android:id="@+id/perf30"
+        android:layout_width="91dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="92dp"
+        android:background="@android:color/transparent"
+        android:onClick="envase30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageButton
+        android:id="@+id/relleno30"
+        android:layout_width="91dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@android:color/transparent"
+        android:onClick="envase30"
+        app:layout_constraintEnd_toStartOf="@+id/relleno60"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageButton
+        android:id="@+id/perf60"
+        android:layout_width="91dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="92dp"
+        android:background="@android:color/transparent"
+        android:onClick="envase60"
+        app:layout_constraintStart_toEndOf="@+id/perf30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageButton
+        android:id="@+id/relleno60"
+        android:layout_width="91dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@android:color/transparent"
+        android:onClick="envase60"
+        app:layout_constraintEnd_toStartOf="@+id/rell120"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageButton
+        android:id="@+id/perfume120"
+        android:layout_width="91dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="92dp"
+        android:background="@android:color/transparent"
+        android:onClick="envase120"
+        app:layout_constraintStart_toEndOf="@+id/perf60"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/textSelectHandle" />
+
+    <ImageButton
+        android:id="@+id/rell120"
+        android:layout_width="91dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/textSelectHandle" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="158dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="Suma"
+        android:text="Terminar Venta"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="149dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="28dp"
+        android:text="Realizar Venta"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNom"
+        android:layout_width="364dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="248dp"
+        android:ems="10"
+        android:hint="Nombre del Producto"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/txtproducto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCodigo"
+        android:layout_width="110dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:editable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCant" />
+
+    <TextView
+        android:id="@+id/txtPrecio"
+        android:layout_width="86dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/txtCodigo"
+        app:layout_constraintTop_toBottomOf="@+id/txtproducto" />
+
+    <EditText
+        android:id="@+id/txtproducto"
+        android:layout_width="207dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="248dp"
+        android:ems="10"
+        android:hint="Producto"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/txtCant"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="264dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="104dp"
+        android:onClick="Guardar"
+        android:text="Confirmar Registro"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/txtgramos"
+        android:layout_width="82dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:ems="10"
+        android:hint="Gramos"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/CRT"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/CRT"
+        android:layout_width="132dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="248dp"
+        android:onClick="Concentrado"
+        android:text="Concentrado"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textOff="NO"
+        android:textOn="SI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCant"
+        android:layout_width="139dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="248dp"
+        android:ems="10"
+        android:hint="Cantidad"
+        android:inputType="number"
+        android:text="1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="67dp"
+        android:layout_height="58dp"
+        android:background="@android:color/transparent"
+        android:onClick="IraMenu"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <TableLayout
+        android:id="@+id/btnterminar"
+        android:layout_width="1270dp"
+        android:layout_height="274dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Campocant"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Campoproducto"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Camponame"
+                android:layout_width="219dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Campogr"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Campocodigo"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/CampoPrecioP"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/campocant2"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campoproducto2"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/camponame2"
+                android:layout_width="219dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campogr2"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campocodigo2"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campoPrecioP2"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/campocant3"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campoproducto3"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/camponame3"
+                android:layout_width="219dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campogr3"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campocodigo3"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campoPrecioP3"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/campocant4"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campoproducto4"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/camponame4"
+                android:layout_width="219dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campogr4"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campocodigo4"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/campoPrecioP4"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/TOTAL"
+        android:layout_width="113dp"
+        android:layout_height="61dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
